@@ -41,13 +41,11 @@ test('splitting should be correct', () => {
 
     // expect result
     expect(result1.length).toBe(3)
-    // expect(result1).toBe(['how', 'are', 'you'])
     expect(result1[0]).toBe('how')
     expect(result1[1]).toBe('are')
     expect(result1[2]).toBe('you')
 
     expect(result2.length).toBe(4)
-    // expect(result2).toBe(['i', 'am', 'you', 'thanks'])
     expect(result2[0]).toBe('i')
     expect(result2[1]).toBe('am')
     expect(result2[2]).toBe('ok')
