@@ -9,7 +9,7 @@ export const mult = (a: number, b: number) => {
 export const splitIntoWords = (sentence: string) => {
     const result = sentence
         .toLowerCase()
-        .replace(/[^a-za-яё0-9\s]/, '')
+        .replace(/[0-9\s]/, '')
         .split(" ")
         .filter(w => w !== '')
 

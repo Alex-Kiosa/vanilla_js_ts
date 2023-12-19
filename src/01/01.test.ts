@@ -5,14 +5,17 @@ test('sum should be correct', () => {
     const a = 1;
     const b = 2;
     const c = 3;
+    const d = 4;
 
     // action
     const result1 =  sum(a, b)
     const result2 =  sum(a, c)
+    const result3 =  sum(a, d)
 
     // expect result
     expect(result1).toBe(3)
     expect(result2).toBe(4)
+    expect(result3).toBe(5)
 })
 
 test('mult should be correct', () => {
@@ -33,7 +36,7 @@ test('mult should be correct', () => {
 test('splitting should be correct', () => {
     // start data
     const sentence1 = 'How are  you'
-    const sentence2 = 'I am ok, thanks'
+    const sentence2 = 'I am ok, thanks!'
 
     // action
     const result1 = splitIntoWords(sentence1)
