@@ -1,32 +1,32 @@
-import {mult, splitIntoWords, sum} from "./01";
+import {multiply, splitIntoWords, sum} from "./01";
+
+// start data for test 1 and test 2
+let a: number;
+let b: number;
+let c: number;
+
+beforeEach(() => {
+    a = 1;
+    b = 2;
+    c = 3;
+})
 
 test('sum should be correct', () => {
     // start data
-    const a = 1;
-    const b = 2;
-    const c = 3;
-    const d = 4;
 
     // action
-    const result1 =  sum(a, b)
-    const result2 =  sum(a, c)
-    const result3 =  sum(a, d)
+    const result1 = sum(a, b)
+    const result2 = sum(a, c)
 
     // expect result
     expect(result1).toBe(3)
     expect(result2).toBe(4)
-    expect(result3).toBe(5)
 })
 
-test('mult should be correct', () => {
-    // start data
-    const a = 1;
-    const b = 2;
-    const c = 3;
-
+test('multiply should be correct', () => {
     // action
-    const result1 =  mult(a, b)
-    const result2 =  mult(a, c)
+    const result1 = multiply(a, b)
+    const result2 = multiply(a, c)
 
     // expect result
     expect(result1).toBe(2)

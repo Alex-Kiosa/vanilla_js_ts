@@ -2,16 +2,16 @@ export const sum = (a: number, b: number) => {
     return a + b;
 }
 
-export const mult = (a: number, b: number) => {
+export const multiply = (a: number, b: number) => {
     return a * b;
 }
 
 export const splitIntoWords = (sentence: string) => {
-    const result = sentence
-        .toLowerCase()
-        .replace(/[0-9\s]/, '')
-        .split(" ")
-        .filter(w => w !== '')
+    const reg = new RegExp('[.,:;?!-]')
 
-    return result
+    return sentence.split(" ")
+        .filter(w => w !== "")
+        .map(w => {
+            return w.toLowerCase().replace(reg, "")
+        })
 }
