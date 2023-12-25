@@ -1,4 +1,4 @@
-import {ClubType, GovernmentBuilding, HouseType, PlayerMainInfoType} from "../02/02";
+import {CityType, ClubType, GovernmentBuilding, HouseType, PlayerMainInfoType} from "../02/02";
 
 export const sum = (a: number, b: number) => {
     return a+b
@@ -27,4 +27,8 @@ export const toFireStuff = (building: GovernmentBuilding, stuffCountToFire: numb
 
 export const toHireStuff = (building: GovernmentBuilding, stuffCountToFire: number) => {
     building.staffCount += stuffCountToFire
+}
+
+export function createMessage(props:CityType) {
+    return `Hello ${props.title} citizens! In our city live ${props.citizensNumber}`
 }
