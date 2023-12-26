@@ -2,6 +2,7 @@ type UsersType = {
     [key: string]: { id: number, name: string }
 }
 
+// ассоциативный массив
 export const users: UsersType = {
     '101': {id: 101, name: 'Alex'},
     '134502': {id: 134502, name: 'Dan'},
@@ -9,12 +10,12 @@ export const users: UsersType = {
     '4545': {id: 4545, name: 'Ivan'},
 }
 
-const user = {id: 1000500, name: 'Liza'}
-
+const user ={id: 1000, name: "Mathew"}
 users[user.id] = user
-delete users[user.id]
-users[user.id].name = 'Tanya'
+delete users[user.id] // удаляет моментально быстро, просто затирается ячейка памяти. Сложность алгоритмов O(1)
+users[user.id].name = "Zheka"
 
+// обычный массив
 export let usersArray = [
     {id: 101, name: 'Alex'},
     {id: 134502, name: 'Dan'},
@@ -22,6 +23,5 @@ export let usersArray = [
     {id: 4545, name: 'Ivan'},
 ]
 
-// usersArray.push(user)
-const usersCopy = [...usersArray.filter(e => e !== user), user]
-let usersDel = usersArray.filter(e => e !== user)
+const usersArrayCopy = [...usersArray.filter(e => e.id !== user.id),user]
+usersArrayCopy.splice(usersArrayCopy.indexOf(user), 1)

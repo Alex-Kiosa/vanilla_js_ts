@@ -14,13 +14,15 @@ beforeEach(() => {
 })
 
 test("Should update corresponding user", () => {
-    users['4545'].name = 'Taras'
+    // users[134502].name = 'Tanya'
+    users[21] = {id: 21, name: 'Felix'}
 
-    expect(users["4545"].name).toBe('Taras')
+    // expect(users[134502].name).toBe('Tanya')
+    expect(users[21]).toEqual({id: 21, name: 'Felix'})
 })
 
 test("Should delete corresponding user", () => {
-    delete users['4545']
+    delete users[21]
 
-    expect(users["4545"]).toBe(undefined)
+    expect(users[21]).toBe(undefined)
 })
