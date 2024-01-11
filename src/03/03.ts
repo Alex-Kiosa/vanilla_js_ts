@@ -1,10 +1,10 @@
-import {CityType, ClubType, GovernmentBuilding, HouseType, PlayerMainInfoType} from "../02/02";
+import {CityType, ClubType, GovernmentBuilding, HouseType, TransferGoalType} from "../02/02";
 
 export const sum = (a: number, b: number) => {
     return a+b
 }
 
-export const addTransferGoal = (club: ClubType, transferCoal: PlayerMainInfoType) => {
+export const addTransferGoal = (club: ClubType, transferCoal: TransferGoalType) => {
     club.transferGoals.push(transferCoal)
 }
 

@@ -1,10 +1,10 @@
-import {ClubType, isFoundedBefore1900, makeClubChampion, PlayerMainInfoType} from "../02/02";
+import {ClubType, isFoundedBefore1900, makeClubChampion, TransferGoalType} from "../02/02";
 import {addTransferGoal} from "./03";
 
 // start data
 let club: ClubType
 let club2: ClubType
-let transferCoal: PlayerMainInfoType
+let transferCoal: TransferGoalType
 
 beforeEach(() => {
     club = {
@@ -37,6 +37,17 @@ beforeEach(() => {
                 },
                 position: 'CF'
             },
+            {
+                id: 1,
+                firstName: 'Owen',
+                lastName: "Michael",
+                dateBirth: {
+                    year: 1979,
+                    month: "December",
+                    day: 14
+                },
+                position: 'ST'
+            }
         ]
     }
     club2 = {
@@ -90,10 +101,10 @@ test("new transfer goal should be added", () => {
     addTransferGoal(club, transferCoal)
 
     // expect result
-    expect(club.transferGoals.length).toBe(2)
-    expect(club.transferGoals[1].firstName).toBe("Piero Martín")
-    expect(club.transferGoals[1].dateBirth.day).toBe(9)
-    expect(club.transferGoals[1].id).toBeDefined()
+    expect(club.transferGoals.length).toBe(3)
+    expect(club.transferGoals[2].firstName).toBe("Piero Martín")
+    expect(club.transferGoals[2].dateBirth.day).toBe(9)
+    expect(club.transferGoals[2].id).toBeDefined()
 })
 
 test("club should be made champion", () => {

@@ -3,14 +3,14 @@ export type DateBirthType = {
     month: string
     day: number
 }
-export type PlayerMainInfoType = {
+export type TransferGoalType = {
     id: number
     firstName: string
     lastName: string
     dateBirth: DateBirthType
     position: string
 }
-export type TransferGoalsType = [PlayerMainInfoType]
+export type TransferGoalsType = Array<TransferGoalType>
 export type ClubType = {
     name: string
     founded: number
@@ -85,7 +85,7 @@ export const city = {
             repaired: false,
             address: {
                number: 100,
-               street: {title: "White street"}
+               street: {city: "White street"}
             }
 
         },
@@ -94,7 +94,7 @@ export const city = {
             repaired: false,
             address: {
                 number: 100,
-                street: {title: "Happy street"}
+                street: {city: "Happy street"}
             }
 
         },
@@ -103,7 +103,7 @@ export const city = {
             repaired: false,
             address: {
                 number: 101,
-                street: {title: "White street"}
+                street: {city: "White street"}
             }
 
         }
@@ -114,7 +114,7 @@ export const city = {
             budget: 200000,
             staffCount: 200,
             address: {
-                street: {title: "Central street"}
+                street: {city: "Central street"}
             }
         },
         {
@@ -122,7 +122,7 @@ export const city = {
             budget: 500000,
             staffCount: 1000,
             address: {
-                street: {title: "South street"}
+                street: {city: "South street"}
             }
         }
     ],
