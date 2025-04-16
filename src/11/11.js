@@ -112,3 +112,7 @@ function CarCreator(brand, maxSpeed) {
 // accumulator.read()
 // accumulator.read()
 // alert(accumulator.value)
+
+console.log([1,2,3,4,5].reduce((currentSum, el)=> {
+    return currentSum + el
+},))
