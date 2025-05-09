@@ -88,7 +88,7 @@ const readFile = (path) => {
 }
 
 // Предположим разработчик пользуется нашей библиотекой. Он импортирует функцию, которая возвращает промис
-const promise_2 = readFile('./index.js')
+const promise_2 = readFile('./lesson.js')
 */
 
 // Написать функцию delay(ms), которая возвращает promise,
