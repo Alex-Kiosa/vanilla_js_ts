@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import "./generics/1";
-
+import "./generics/2";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
